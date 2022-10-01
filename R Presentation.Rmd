@@ -60,7 +60,7 @@ name: R Basics
 
 #### Variable assignment in R
 
-Variable assignment in R is done using \<- operator with variable at the left side and its corresponding value at the right side of this operator.
+Variable assignment in R is done using <- operator with variable at the left side and its corresponding value at the right side of this operator.
 
 ```{r echo=TRUE}
 a <- 1
