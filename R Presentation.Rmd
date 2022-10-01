@@ -1,0 +1,132 @@
+---
+title: "R Presentation"
+subtitle: "R Language Basics <br/>Using &#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"  
+author: "Aswin Chidambaram Balakrishnan"
+date: '2022-10-01'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#12568F",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+
+### R Language
+
+R is a programming language for **statistical computing** and graphics supported by the __R Core Team__ and the __R Foundation for Statistical Computing__.
+
+According to user surveys and studies of scholarly literature databases, R is one of the most commonly used programming languages used in __data mining__.
+
+It is written primarily in **C, Fortran, and R** itself (partially self-hosting).
+
+R has a **command-line interface** and other multiple third party **graphical user interfaces**.
+
+R is a **intepreted programming language** and it also supports **procedural programming with functions** and, for some functions, **object-oriented programming with generic functions**.
+
+R has stronger object-oriented programming facilities than most statistical computing languages.
+
+R's extensible object system includes objects for (among others): **regression models, time-series and geo-spatial coordinates**.
+
+---
+name: R Basics
+
+### R Basics
+
+#### Variable assignment in R
+
+Variable assignment in R is done using \<- operator with variable at the left side and its corresponding value at the right side of this operator.
+
+```{r echo=TRUE}
+a <- 1
+a
+```
+
+#### Functions in R
+
+Function is used especially for the re-usability of the code and this can be called any number of times. The syntax is below:
+
+```{r echo=TRUE}
+hello <- function() {
+  print("Hello!!!")
+}
+hello()
+```
+
+---
+
+### Inbuilt Functions
+
+#### Math Functions
+
+abs(x) ---> Returns the absolute value of the input x.
+
+```{r echo=TRUE}
+x <- 10
+print(abs(x))
+```
+
+sqrt(x) ---> Returns the square root value of the input x.
+
+```{r echo=TRUE}
+x <- 25
+print(sqrt(x))
+```
+
+log(x) ---> Returns the natural logarithm of the input x.
+
+```{r echo=TRUE}
+x <- 5
+print(log(x))
+```
+---
+
+### Inbuilt Functions
+
+#### String Functions
+
+substr(x, start=n1, stop=n2) ---> Extract substring in a character vector.
+
+```{r echo=TRUE}
+x <- "hello!!!!"
+print(substr(x, 2, 5))
+```
+
+paste(..., sep="") ---> Concatenates strings after using sep string to separate them.
+
+```{r echo=TRUE}
+x <- "hello!!!!"
+paste('hi','hello',1,2,3)
+```
+
+toupper(x) ---> Converts the string into upper case.
+
+```{r echo=TRUE}
+x <- "hello!!!!"
+print(toupper(x))
+```
